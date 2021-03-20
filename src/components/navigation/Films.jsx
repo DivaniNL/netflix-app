@@ -2,7 +2,7 @@ import React from 'react';
 
 const Films = () => {
     return(
-        <div className="container">
+        <div className="container-films container">
             <div className="left">
                 <h4>Films</h4>
             </div>

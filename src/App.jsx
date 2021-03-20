@@ -1,8 +1,7 @@
 
 
 import React from 'react';
-import './css/App.css';
-import 'materialize-css/dist/css/materialize.min.css'
+import './App.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './components/navigation/Home.jsx';
 import NavBar from './components/navigation/NavBar.jsx';

@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyList = () => {
     return(
-        <div className="container">
+        <div className="container container-mylist">
             <div className="left">
                 <h4>MyList</h4>
             </div>

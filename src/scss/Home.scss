@@ -1,0 +1,23 @@
+.container-home{
+    height: 1095px;
+    background-color: white;
+    padding-left: 1.4609375%;
+    .netflix-featured-details{
+        font-size: 1.5em;
+        top: 314px;
+        height: 628px;
+        width: 36.6vw;
+        position: relative;
+        bottom: 174px;
+        background-color: yellowgreen;
+        .netflix-featured-image{
+
+            height: 522px;
+            background-color: purple;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
