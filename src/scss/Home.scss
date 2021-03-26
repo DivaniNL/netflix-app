@@ -1,23 +1,66 @@
+@import './variables';
+body{
+font-family: Arial, Helvetica, sans-serif;
+background-color: gray;
+
 .container-home{
     height: 1095px;
-    background-color: white;
-    padding-left: 1.4609375%;
+    background-image: url("../images/testbanner.jpg");
+    background-size: contain;
+    width: 100%;
+    padding-left: $nf-padding-left;
+    background-repeat: no-repeat;
+
     .netflix-featured-details{
         font-size: 1.5em;
-        top: 314px;
-        height: 628px;
-        width: 36.6vw;
-        position: relative;
-        bottom: 174px;
-        background-color: yellowgreen;
+        position: absolute;
+        top: 20%;
+        bottom: 33%;
+        left: 4%;
+        width: 36%;
+        vertical-align: bottom;
         .netflix-featured-image{
-
-            height: 522px;
-            background-color: purple;
             img{
                 width: 100%;
+            }
+        }
+        .netflix-featured-text{
+            font-size: 1.4vw;
+            display: block;
+            margin-bottom: 2rem;
+        }
+        .netflix-featured-buttons{
+            display: flex;
+            width: 90%;
+            .nf-btn{
+                padding: 0.4rem;
+                line-height: 2.4rem;
+                display: flex;
+                border-radius: 6px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                border: none;
+
+                .nf-btn-fa{
+                    font-size: 1.5vw;
+                    font-weight: 500;
+
+                    line-height: 2.4rem;
+                }
+                .space{
+                    width: 1rem;
+                }
+                .nf-btn-text{
+                    font-size: 1.5vw;
+                    font-weight: 500;
+                    line-height: 2.4rem;
+                }
+                &:nth-of-type(1){
+                    margin-right: 1rem;
+                }
             }
         }
     }
 }
 
+}
