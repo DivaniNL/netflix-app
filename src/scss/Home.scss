@@ -4,7 +4,7 @@ font-family: Arial, Helvetica, sans-serif;
 background-color: gray;
 
 .container-home{
-    height: 1095px;
+    min-height: 100vw;
     background-image: url("../images/testbanner.jpg");
     background-size: contain;
     width: 100%;
@@ -14,7 +14,7 @@ background-color: gray;
     .netflix-featured-details{
         font-size: 1.5em;
         position: absolute;
-        top: 20%;
+        top: 5rem;
         bottom: 33%;
         left: 4%;
         width: 36%;
@@ -27,7 +27,7 @@ background-color: gray;
         .netflix-featured-text{
             font-size: 1.4vw;
             display: block;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
         .netflix-featured-buttons{
             display: flex;
@@ -42,7 +42,7 @@ background-color: gray;
                 border: none;
 
                 .nf-btn-fa{
-                    font-size: 1.5vw;
+                    font-size: 1.2vw;
                     font-weight: 500;
 
                     line-height: 2.4rem;
@@ -51,7 +51,7 @@ background-color: gray;
                     width: 1rem;
                 }
                 .nf-btn-text{
-                    font-size: 1.5vw;
+                    font-size: 1.2vw;
                     font-weight: 500;
                     line-height: 2.4rem;
                 }
