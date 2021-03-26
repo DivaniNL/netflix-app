@@ -3,9 +3,11 @@ import '../../scss/NavBar.scss';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faGift, faBell, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 const NavBar = () => {
+
     return (
-        <nav className="nav-wrapper black darken-3 netflix-nav">
+        <nav className="nav-wrapper  darken-3 netflix-nav" id="netflix-nav">
             <div className="container">
                 <a className="left logo">
                     <img src="images/1b4576f3d6235ba1a76bab39f3916b74.png"></img>
@@ -29,5 +31,6 @@ const NavBar = () => {
             </div>
         </nav>
     )
+    
 }
 export default NavBar;

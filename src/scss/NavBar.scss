@@ -3,7 +3,7 @@
     position: fixed;
     z-index: 10;
     top: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.635), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.635), rgba(0, 0, 0, 0)) !important;
     height: 68px;
     padding-left: $nf-padding-left;
     line-height: 68px;

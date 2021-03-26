@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faGift, faBell, faChevronDown, faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
+    
     return(
         <div className="container container-home">
             <div className="netflix-featured-details">

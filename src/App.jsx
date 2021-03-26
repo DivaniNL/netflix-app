@@ -12,10 +12,19 @@ import MyList from './components/navigation/MyList.jsx';
 
 
 class App extends React.Component {
+     handleScroll(){
+         if(document.getElementById("appname").scrollTop > 10){
+         document.getElementById("netflix-nav").classList.add("black");
+         }else{
+            document.getElementById("netflix-nav").classList.remove("black");
+         }
+
+    }
     render(){
+        
         return(
             <BrowserRouter>
-            <div className = "App-content">
+            <div id="appname" className = "App-content" onScroll={this.handleScroll}>
                 <NavBar />
                 <Route path='/' component={Home} exact />
                 <Route path='/series' component={Series} />
