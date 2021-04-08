@@ -3,9 +3,9 @@ import '../../scss/NavBar.scss';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faGift, faBell, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import SearchInput from './SearchInput.jsx'
 
-const NavBar = () => {
-
+const NavBar = (props) => {
     return (
         <nav className="nav-wrapper  darken-3 netflix-nav" id="netflix-nav">
             <div className="container">
@@ -22,7 +22,10 @@ const NavBar = () => {
                         <li><NavLink className="navlink" to="/mylist">My List</NavLink></li>
                     </ul>
                     <div className="right netflix-right-nav">
-                        <div><a><FontAwesomeIcon className="fontawesome-netflix-nav" icon={faSearch} /></a></div>
+                        <div>
+                            <SearchInput handleSubmit={props.handleSubmit} handleChange={props.handleChange} />
+                            <a><FontAwesomeIcon className="fontawesome-netflix-nav" icon={faSearch} /></a>
+                        </div>
                         <div><a><FontAwesomeIcon className="fontawesome-netflix-nav" icon={faGift} /></a></div>
                         <div><a><FontAwesomeIcon className="fontawesome-netflix-nav" icon={faBell} /></a></div>
                         <div><a><img className="pf" src="images/testprofile.png"></img>&nbsp;<FontAwesomeIcon icon={faChevronDown} /></a></div>

@@ -1,0 +1,48 @@
+.nf-group-header-wrapper{
+    width: 100%;
+    .nf-group-header{
+        text-align: center;
+    }
+}
+
+.nf-films-container{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .nf-movie-wrapper{
+        background-color: #333;
+        border-radius: 5px;
+        margin: 5px;
+
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        min-height: 30rem;
+        padding: 1rem;
+        .nf-movie-title-wrapper{
+
+            .nf-movie-title{
+
+            }
+        }
+
+        .nf-movie-description-wrapper{
+
+
+            .nf-movie-description{
+                font-size: 14px;
+            }
+        }
+
+        .nf-movie-image-wrapper{
+            margin: 0 auto;
+            
+            .nf-movie-image{
+
+            }
+        }
+    }
+}
