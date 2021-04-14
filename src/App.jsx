@@ -9,13 +9,14 @@ import Series from './components/navigation/Series.jsx';
 import Films from './components/navigation/Films.jsx';
 import NewAndPopular from './components/navigation/NewAndPopular.jsx';
 import MyList from './components/navigation/MyList.jsx';
-
+import Data from './components/firebase/Data.jsx';
 
 class App extends React.Component {
     constructor(){
         super()
         this.state = {
             movies: [],
+            filteredMovies: [],
             searchterm: ''
         }
         this.ApiKey = "5bcdb6f7a10678d29bc711b5f82ef477";
@@ -27,8 +28,8 @@ class App extends React.Component {
         .then(data => data.json())
         .then(data => {
             console.log(data);
-            this.setState({ movies: [...data.results]});
-            console.log(this.state.movies);
+            this.setState({ filteredMovies: [...data.results]});
+            console.log(this.state.filteredMovies);
         });
     }
     handleChange = (e) => {
@@ -56,6 +57,7 @@ class App extends React.Component {
                 </Route>
                 <Route  path='/newandpopular' component={NewAndPopular} />
                 <Route  path='/mylist' component={MyList} />
+                <Route path='/' component={Data} />
             </div>
             </BrowserRouter>
         )
