@@ -25,20 +25,23 @@ class App extends React.Component {
     handleSubmit = (e) => {
         console.log(this.state.searchterm);
 
-        e.preventDefault();
+        // e.preventDefault();
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.ApiKey}&query=${this.state.searchterm}`)
         .then(data => data.json())
         .then(data => {
             console.log(data);
             this.setState({ movies: [...data.results]});
             console.log(this.state.movies);
+        }).catch((error)=>{
+            console.log(error);
         });
-        window.location.reload();
+       
+        
         
     }
     handleChange = (e) => {
         this.setState({ searchterm: e.target.value })
-        localStorage.setItem("searchterm", this.state.searchterm);
+        localStorage.setItem("searchterm", e.target.value);
     }
 
     handleScroll(){
