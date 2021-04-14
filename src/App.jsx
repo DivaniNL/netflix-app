@@ -16,7 +16,6 @@ class App extends React.Component {
         super()
         this.state = {
             movies: [],
-            filteredMovies: [],
             searchterm: ''
         }
         this.ApiKey = "5bcdb6f7a10678d29bc711b5f82ef477";
@@ -28,8 +27,8 @@ class App extends React.Component {
         .then(data => data.json())
         .then(data => {
             console.log(data);
-            this.setState({ filteredMovies: [...data.results]});
-            console.log(this.state.filteredMovies);
+            this.setState({ movies: [...data.results]});
+            console.log(this.state.movies);
         });
     }
     handleChange = (e) => {
