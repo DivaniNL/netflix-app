@@ -18,6 +18,8 @@ const NavBar = (props) => {
                         <li><NavLink className="navlink" to="/">Home</NavLink></li>
                         <li><NavLink className="navlink" to="/series">Series</NavLink></li>
                         <li><NavLink className="navlink" to="/films">Films</NavLink></li>
+                        <li><NavLink className="navlink" to="/horror">Horror</NavLink></li>
+                        <li><NavLink className="navlink" to="/kids">Kids</NavLink></li>
                         <li><NavLink className="navlink" to="/newandpopular">New And Popular</NavLink></li>
                         <li><NavLink className="navlink" to="/mylist">My List</NavLink></li>
                     </ul>
