@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../../context/AuthContext'
-import { auth } from '../../firebase'
+// import { auth } from '../../firebase'
 import { Link, useHistory } from 'react-router-dom'
 
 export default function Login() {
@@ -11,7 +11,7 @@ export default function Login() {
     const [loading, setLoading ] = useState(false);
     const { login } = useAuth();
     const history = useHistory();
-    
+    console.log("hallo");
     async function handleSubmit(e) {
         e.preventDefault()
 
@@ -20,6 +20,7 @@ export default function Login() {
             setError('')
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value);
+            
             history.push('/')
         } catch {
             setError('failed to sign in')
@@ -27,11 +28,12 @@ export default function Login() {
 
         setLoading(false)
     }
+    
     return (
         <>
             <br/>
             <br/>
-            <br />
+            <br/>
             <br/>
             <br/><br/>
 

@@ -13,7 +13,9 @@ import Signup from './components/auth/Signup.jsx';
 import Login from './components/auth/Login.jsx';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/auth/privateRoute.jsx';
-import LogOut from './components/auth/LogOut'
+import LogOut from './components/auth/LogOut';
+import Horrorfilms from './components/navigation/HorrorFilms.jsx';
+import KidsFilms from './components/navigation/KidsFilms.jsx'
 
 class App extends React.Component {
     constructor(){
@@ -60,30 +62,37 @@ class App extends React.Component {
         return (
             <AuthProvider>
                 <BrowserRouter>
-                    <PrivateRoute path='/Logout' component={LogOut} />
-                    <PrivateRoute path='/Signup' component={Signup} />
-                    <PrivateRoute path='/Login' component={Login} />
-                    <div id="appname" className = "App-content" onScroll={this.handleScroll}>
-                        <NavBar handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
-                        <PrivateRoute  path='/' component={Home} exact />
-                        <PrivateRoute  path='/series' component={Series} />
-                        {/* <Route path='/films'  >    
-                            <Films movies={this.state.movies} searchterm={"spider"} />
-                        </Route> */}
-                        <PrivateRoute path="/" exact>
-                            <Films  searchterm={localStorage.getItem("searchterm")} />
-                        </PrivateRoute>
-                        <PrivateRoute path="/horror" exact>
-                            <Films category={"horror"}/>
-                        </PrivateRoute>
-                        <PrivateRoute path="/kids" exact>
-                            <Films adult={"false"}/>
-                        </PrivateRoute>
-                        {/* <Films  searchterm={localStorage.getItem("searchterm")} /> */}
-                        <PrivateRoute  path='/newandpopular' component={NewAndPopular} />
-                        <PrivateRoute  path='/mylist' component={MyList} />
-                        <PrivateRoute path='/' component={Data} exact />    
-                    </div>
+                    <Switch>
+                        <PrivateRoute path='/Logout' component={LogOut} />
+                        <PrivateRoute path='/Signup' component={Signup} />
+                        <PrivateRoute path='/Login' component={Login} />
+                        <div id="appname" className="App-content" onScroll={this.handleScroll}>
+                        
+                            <NavBar handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
+                            <PrivateRoute  path='/' component={Home} exact />
+                            <Route  path='/series' component={Series} />
+                            {/* <Route path='/films'  >    
+                                <Films movies={this.state.movies} searchterm={"spider"} />
+                            </Route> */}
+                            <Route path="/" exact>
+                                <Films  searchterm={localStorage.getItem("searchterm")} />
+                            </Route>
+                            <Route path="/" exact>
+                                <Horrorfilms searchterm={localStorage.getItem("searchterm")} category={"horror"}/>
+                            </Route>
+                            <Route path="/" exact>
+                                <KidsFilms searchterm={localStorage.getItem("searchterm")} adult={"false"}/>
+                            </Route>
+                            <Route path="/kids" exact>
+                                <Films adult={"false"}/>
+                            </Route>
+                            {/* <Films  searchterm={localStorage.getItem("searchterm")} /> */}
+                            <Route  path='/newandpopular' component={NewAndPopular} />
+                            <Route  path='/mylist' component={MyList} />
+                            
+                            <Route path='/' component={Data} exact />    
+                        </div>
+                    </Switch>
                 </BrowserRouter>
             </AuthProvider>
         )

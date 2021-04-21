@@ -28,7 +28,7 @@ class Data extends React.Component {
             ///make a seperate moviedetails div for every movie in the database
             movies.map((movie, index) =>(
                 ///logging the name of the movie
-                console.log(movie.name),
+                console.log(movie. name),
                 //making the container for each movie
                 <div key={index} id="moviedetails">
                     {/* printing movie name */}

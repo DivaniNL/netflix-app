@@ -4,15 +4,15 @@ import { useAuth } from '../../context/AuthContext';
 
 export default function PrivateRoute({component: Component, ...rest }) {
     const { currentUser } = useAuth()
-    console.log(JSON.stringify(currentUser))
+    const { loggedinUser } = localStorage.getItem("loggedinUser");
     return (
         <Route
             {...rest}
             render={props => {
-                return currentUser ? <Component {...props} /> : <Redirect to="/login" />
-                // currentUser ? 
+                return currentUser === true || loggedinUser === true ? <Component {...props} />  : <Component {...props} />
             }}
         >
         </Route>
     )
 }
+//<Redirect to="/Login" />
